@@ -1,0 +1,38 @@
+Git 命令
+
+Branch
+
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+创建+切换分支+远程: git checkout -b dev origin/dev
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+查看git分支关系： git log --graph --decorate --oneline --simplify-by-decoration --all
+--no-ff参数，表示禁用Fast forward并生成一个新的commit：
+git merge --no-ff -m "merge with no-ff" dev
+
+Stash
+
+git stash
+git stash save <msg>
+git stash list
+git stash apply <stashname>
+git stash pop 
+git stash drop <stashname>
+git stash clear
+找回 git stash clear的内容
+首先输入
+git fsck --lost-found
+会看到 一条一条的记录 类似 
+dangling commit 7010e0447be96627fde29961d420d887533d7796
+复制dangling commit 的id（其他的dangling blob不用理会） 
+然后输入
+git show 7010e0447be96627fde29961d420d887533d7796
+查看具体内容， 找到你想要的记录
+记录中会描述日期和摘要，
+日期是你git stash 的日期， 
+找到你想要的记录后输入
+git merge 7010e0447be96627fde29961d420d887533d7796
+这样就还原了你git stash drop, git stash clear  的内容 
