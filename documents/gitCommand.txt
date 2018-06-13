@@ -36,3 +36,5 @@ git show 7010e0447be96627fde29961d420d887533d7796
 找到你想要的记录后输入
 git merge 7010e0447be96627fde29961d420d887533d7796
 这样就还原了你git stash drop, git stash clear  的内容 
+
+Merge
