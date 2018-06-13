@@ -38,3 +38,4 @@ git merge 7010e0447be96627fde29961d420d887533d7796
 这样就还原了你git stash drop, git stash clear  的内容 
 
 Merge rebase
+git merge
