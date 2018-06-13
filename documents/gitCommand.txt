@@ -37,5 +37,11 @@ git show 7010e0447be96627fde29961d420d887533d7796
 git merge 7010e0447be96627fde29961d420d887533d7796
 这样就还原了你git stash drop, git stash clear  的内容 
 
+Add
+ 
+git add -A 保存所有的修改 
+git add . 保存新的添加和修改，但是不包括删除 
+git add -u 保存修改和删除，但是不包括新建文件。
+
 Merge rebase
 git merge
